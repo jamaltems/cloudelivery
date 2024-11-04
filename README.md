@@ -1,22 +1,23 @@
-# cloudelivery
-Cloudelivery - Service de livraison rapide et écologique, spécialisé dans le last mile pour les e-commerçants et les entreprises locales.
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudelivery - Livraison Last Mile Rapide et Écologique</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Cloudelivery - Service de Livraison</title>
+    <!-- Importer Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Importer Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Styles globaux pour le site */
+        /* Styles globaux */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: #333;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
         }
-        
+
         header {
             background-color: #ff69b4;
             color: white;
@@ -25,196 +26,129 @@ Cloudelivery - Service de livraison rapide et écologique, spécialisé dans le 
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        nav {
-            margin-top: 20px;
+            font-weight: 600;
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
         }
 
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
+        .hero {
+            background-color: #ffe3f1;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
-        h2 {
-            color: #ff69b4;
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            text-align: center;
-        }
-
-        .content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .service-list, .review-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .service-item, .review-item {
-            flex: 1 1 30%;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .btn {
+        .btn-custom {
             background-color: #ff69b4;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            font-weight: 500;
             border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 15px;
-            transition: background-color 0.3s;
         }
 
-        .btn:hover {
-            background-color: #e557a1;
+        .service-item {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
         }
 
-        /* Styles pour le formulaire de suivi et le calculateur de tarif */
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .form-container input {
+        footer {
+            background-color: #333;
+            color: white;
             padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .result {
-            font-size: 1.2em;
-            color: #333;
-            margin-top: 10px;
             text-align: center;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Cloudelivery</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Accueil</a>
+                <a class="navbar-brand" href="#services">Services</a>
+                <a class="navbar-brand" href="#about">À propos</a>
+                <a class="navbar-brand" href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>Cloudelivery</h1>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#pricing">Calculateur de Tarifs</a>
-        <a href="#tracking">Suivi de Colis</a>
-        <a href="#reviews">Avis Clients</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section id="services">
-    <h2>Nos Services</h2>
-    <div class="service-list">
-        <div class="service-item">
-            <h3>Livraison Express</h3>
-            <p>Livraison en moins de 24 heures pour garantir la satisfaction de nos clients e-commerçants.</p>
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <div class="hero text-center">
+            <h2 class="display-4 font-weight-bold">Votre solution de livraison rapide et fiable</h2>
+            <p class="lead">Nous livrons vos colis dans les meilleurs délais en respectant vos exigences.</p>
+            <a href="#services" class="btn btn-custom btn-lg mt-3">Découvrir nos services</a>
         </div>
-        <div class="service-item">
-            <h3>Écologique</h3>
-            <p>Flotte de véhicules électriques pour un impact carbone réduit.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mt-5">
+        <h2 class="text-center text-uppercase font-weight-bold mb-4">Nos Services</h2>
+        <div class="row">
+            <div class="col-md-4 service-item">
+                <h3 class="h5 font-weight-bold">Livraison express</h3>
+                <p>Livraison rapide en moins de 24 heures pour les clients professionnels et particuliers.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <h3 class="h5 font-weight-bold">Livraison de colis volumineux</h3>
+                <p>Nous prenons en charge les colis de toutes tailles, avec des solutions adaptées.</p>
+            </div>
+            <div class="col-md-4 service-item">
+                <h3 class="h5 font-weight-bold">Suivi de livraison</h3>
+                <p>Suivez votre colis en temps réel grâce à notre système de tracking.</p>
+            </div>
         </div>
-        <div class="service-item">
-            <h3>Suivi en Temps Réel</h3>
-            <p>Suivez votre colis à tout moment grâce à notre technologie de tracking avancée.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="pricing">
-    <h2>Calculateur de Tarifs</h2>
-    <div class="form-container">
-        <input type="text" id="origin" placeholder="Adresse de départ">
-        <input type="text" id="destination" placeholder="Adresse de destination">
-        <button class="btn" onclick="calculatePrice()">Calculer le Tarif</button>
-        <div class="result" id="price-result">Entrez les adresses pour calculer le tarif</div>
-    </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <h2 class="text-center text-uppercase font-weight-bold mb-4">À propos de nous</h2>
+        <p class="text-center">Cloudelivery est une société de livraison dédiée à fournir un service rapide, fiable et de haute qualité. Nous opérons avec une flotte de véhicules écologiques pour réduire notre impact environnemental.</p>
+    </section>
 
-<section id="tracking">
-    <h2>Suivi de Colis</h2>
-    <div class="form-container">
-        <input type="text" id="tracking-number" placeholder="Numéro de suivi">
-        <button class="btn" onclick="trackPackage()">Suivre le Colis</button>
-        <div class="result" id="tracking-result">Entrez votre numéro de suivi pour connaître l'état de votre colis</div>
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5">
+        <h2 class="text-center text-uppercase font-weight-bold mb-4">Contactez-nous</h2>
+        <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Envoyer</button>
+        </form>
+    </section>
 
-<section id="reviews">
-    <h2>Avis Clients</h2>
-    <div class="review-list">
-        <div class="review-item">
-            <p>"Service ultra rapide ! Mon colis est arrivé le jour même, je recommande vivement Cloudelivery !"</p>
-            <p><strong>- Marie L.</strong></p>
-        </div>
-        <div class="review-item">
-            <p>"Livraison écologique et professionnelle, merci à l'équipe pour leur efficacité."</p>
-            <p><strong>- Paul B.</strong></p>
-        </div>
-        <div class="review-item">
-            <p>"Le suivi en temps réel est génial, je pouvais voir exactement où était mon colis !"</p>
-            <p><strong>- Sophie M.</strong></p>
-        </div>
-    </div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cloudelivery. Tous droits réservés.</p>
+    </footer>
 
-<section id="contact">
-    <h2>Contactez-nous</h2>
-    <p>Pour toute demande de renseignement ou partenariat avec Cloudelivery, n'hésitez pas à nous contacter :</p>
-    <p><strong>Téléphone :</strong> 07.49.46.40.56</p>
-    <p><strong>Email :</strong> contact@cloudelivery.com</p>
-    <p><strong>Adresse à Lyon :</strong> 83 quai Charles de Gaulle, 69006 Lyon</p>
-    <p><strong>Adresse à Marseille :</strong> CASTORS DE SERVIERES, 3 ALLEE DU CENTAURE, 13015 MARSEILLE</p>
-</section>
-
-<script>
-    // Fonction de calcul de tarif (simulation)
-    function calculatePrice() {
-        const origin = document.getElementById("origin").value;
-        const destination = document.getElementById("destination").value;
-
-        if (origin && destination) {
-            document.getElementById("price-result").textContent = `Le tarif estimé entre ${origin} et ${destination} est de 15€.`; // Tarif simulé
-        } else {
-            document.getElementById("price-result").textContent = "Veuillez entrer les adresses de départ et de destination.";
-        }
-    }
-
-    // Fonction de suivi de colis (simulation)
-    function trackPackage() {
-        const trackingNumber = document.getElementById("tracking-number").value;
-
-        if (trackingNumber) {
-            document.getElementById("tracking-result").textContent = `Le colis avec le numéro ${trackingNumber} est en transit.`;
-        } else {
-            document.getElementById("tracking-result").textContent = "Veuillez entrer un numéro de suivi valide.";
-        }
-    }
-</script>
-
+    <!-- JavaScript Bootstrap et Formulaire -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Exemple de script pour gérer la soumission du formulaire de contact
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Merci pour votre message ! Nous vous contacterons bientôt.");
+        });
+    </script>
 </body>
 </html>
+
